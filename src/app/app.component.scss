@@ -1,5 +1,6 @@
 @use './../styles/colors' as colors;
 @use './../styles/fonts' as fonts;
+@use './../styles/width' as width;
 
 .background {
     width: 100%;
@@ -13,11 +14,22 @@
     justify-content: center;
 }
 
+@media screen and (max-width: width.$breakpoint-tablet) {
+    .container-width {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: width.$breakpoint-tablet + 1) {
+    .container-width {
+        justify-content: flex-start;
+    }    
+}
+
 .container-width {
     width: 1200px;
     height: 100%;
-    display: flex;
-    justify-content: flex-start;
+    display: flex;    
     align-items: center;
 }
 

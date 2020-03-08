@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@use './styles/fonts' as fonts;
+
+html {
+     font-size: calc(1em + 1vw)
+}
+
+body {
+    margin: 0px;
+    font-family: fonts.$raleway;
+}
+

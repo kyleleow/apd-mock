@@ -1,0 +1,65 @@
+@use './../styles/colors' as colors;
+@use './../styles/fonts' as fonts;
+
+.background {
+    width: 100%;
+    height: 700px;
+    background-image: url("./../assets/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.container-width {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner-container {
+    color: colors.$color-black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        margin: 0px;
+    }
+
+    .first-line {  
+        font-weight: fonts.$medium;
+        font-size: medium;      
+    }
+
+    .second-line {
+        font-weight: fonts.$extra-bold;
+        font-size: 2em;
+    }
+
+    .third-line {
+        width: 100%;
+        background-color: colors.$color-black;
+        color: colors.$color-white;
+        font-style: italic;
+
+        p {
+            padding: 0.5em;
+            font-size: medium;
+        }
+    }
+
+    .banner-feature {
+        font-size: x-large;
+        font-weight: fonts.$extra-bold;
+        margin: 2em 0em;
+
+        .banner-feature-color-word {
+            color: colors.$color-teal;
+        }
+    }
+}

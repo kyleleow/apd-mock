@@ -1,6 +1,7 @@
 @use './../styles/colors' as colors;
 @use './../styles/fonts' as fonts;
 @use './../styles/width' as width;
+@import './../../node_modules/elegant-icons-sass/scss/elegant-icons-sass.scss';
 
 .background {
     width: 100%;
@@ -57,10 +58,12 @@
         width: 100%;
         background-color: colors.$color-black;
         color: colors.$color-white;
+        font-family: fonts.$hind-guntur;
         font-style: italic;
+        border-radius: 4px;
 
         p {
-            padding: 0.5em;
+            padding: 0.2em 0.5em 0em 0.5em;
             font-size: medium;
         }
     }
@@ -69,9 +72,59 @@
         font-size: x-large;
         font-weight: fonts.$extra-bold;
         margin: 2em 0em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .double-border {
+            border-top: 4px double colors.$color-white;
+            width: calc(100% - 22em);
+        }
+
+        .diamond-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .big-diamond {        
+            transform: rotate(-45deg);
+            width: 0.5em;            
+            height: 0.5em;                                  
+            background: colors.$color-teal;
+            border-radius: 2px;        
+        }
+
+        .medium-diamond {        
+            transform: rotate(-45deg);
+            width: 0.4em;            
+            height: 0.4em;        
+            background: colors.$color-teal;
+            border-radius: 2px;        
+            opacity: 0.7;
+        }
+
+        .small-diamond {        
+            transform: rotate(-45deg);
+            width: 0.3em;            
+            height: 0.3em;        
+            background: colors.$color-teal;
+            border-radius: 2px;        
+            opacity: 0.4;
+        }
+
+        .banner-feature-title-container {            
+        }
 
         .banner-feature-color-word {
             color: colors.$color-teal;
         }
+    }
+
+    .arrow-down-circle {
+        @include elegant-icon('arrow_carrot-down_alt2');
+        color: colors.$color-teal;
+        text-align: center;        
+        font-size: 2em;
     }
 }

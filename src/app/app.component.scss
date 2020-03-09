@@ -23,7 +23,7 @@
 
 @media screen and (min-width: width.$breakpoint-tablet + 1) {
     .container-width {
-        justify-content: flex-start;
+        justify-content: space-between;
     }    
 }
 
@@ -126,5 +126,47 @@
         color: colors.$color-teal;
         text-align: center;        
         font-size: 2em;
+    }
+}
+
+.navbar {
+    background-color: #f9f9f9;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #dedede;
+
+    img {
+        width: 1.5em;
+        height: auto;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: fonts.$extra-bold;
+        color: colors.$color-grey;
+        font-size: small;
+        padding: 1.0em 1.5em;
+
+        &:active {
+            color: colors.$color-white;
+          }
+    }
+
+    a.active {
+        color: colors.$color-white;
+        background-color: colors.$color-teal;
+        border-radius: 5px;
+    }
+
+    .search {
+        @include elegant-icon('icon_search');
+        font-size: small;
+        color: colors.$color-teal;
     }
 }

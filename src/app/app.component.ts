@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'apd-mock';
+
+  // variables
+  isMobile = false;
+
+  toggleNav() {
+    this.isMobile = !this.isMobile;
+  }
 }

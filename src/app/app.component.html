@@ -38,7 +38,12 @@
 <div class="navbar">
   <div class="container-width">
     <img class="brand-logo" src="./../assets/logo.png">
-    <div class="menu">
+
+    <div class="navbar-mobile">
+      <a id="nav-toggle" href="#!" (click)="toggleNav()" [class.active]="isMobile"><span></span></a>  
+    </div>
+    
+    <div class="menu" [class.active]="isMobile">
       <a href="">HOME</a>
       <a class="active" href="">PORTFOLIO</a>
       <a href="">BLOG</a>
@@ -51,6 +56,7 @@
 
   </div>
 </div>
+
 
 <!-- Content -->
 <router-outlet></router-outlet>

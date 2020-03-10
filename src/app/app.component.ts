@@ -14,4 +14,9 @@ export class AppComponent {
   toggleNav() {
     this.isMobile = !this.isMobile;
   }
+
+  scrollTo(target: HTMLElement) {
+    console.log('enter')
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }

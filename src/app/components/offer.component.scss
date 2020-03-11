@@ -10,7 +10,7 @@
 .title-container {
     display: flex;
     justify-content: center;
-    margin: 2em 0em 0.1em 0em;
+    margin: 3em 0em 0.4em 0em;
     
     .title-inner-container {
         display: flex;
@@ -20,11 +20,12 @@
 
         .double-border {
             border-top: 4px double #dedede;
-            width: calc(100% - 27em);
+            width: calc(100% - 24em);
         }
 
         .offer-title-container {
             font-weight: fonts.$extra-bold;
+            margin: 0px 10px;
         }
     }
 }
@@ -90,6 +91,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-bottom: 1em
     }
 
     .title {
@@ -110,6 +112,37 @@
         border: 1px solid #dedede;
         font-size: x-small;
         border-radius: 4px;
+    }
+
+    .button-teal {
+        background-color: colors.$color-teal;   
+        color: #e4e4e4;
+        border-color: colors.$color-teal;   
+    }
+}
+
+.page-breaker-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+
+    .diamond-container {
+        width: 40px;
+        height: 40px;
+        background-color: #00a99d;
+        transform: rotate(-45deg);
+        border-radius: 3px;
+    }
+    
+    .icon-toolbox {
+        @include elegant-icon('icon_toolbox');
+        color: #e4e4e4;
+        text-align: center;        
+        font-size: 21px;
+        background-color: colors.$color-teal;        
+        position: absolute;
     }
 }
 

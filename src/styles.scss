@@ -90,6 +90,10 @@ body {
         .banner-feature-color-word {
             color: colors.$color-teal;
         }
+
+        .banner-feature-title-container {
+            margin: 0px 10px;
+        }
     }
 
     .arrow-down-circle {
@@ -108,6 +112,7 @@ body {
 .diamond-container {
     display: flex;
     align-items: center;
+    margin: 0px 10px;
 }
 
 .big-diamond {        

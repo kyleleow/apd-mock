@@ -1,0 +1,75 @@
+@use './../../styles/colors' as colors;
+@use './../../styles/fonts' as fonts;
+@use './../../styles/variables' as variables;
+@import '../../../node_modules/elegant-icons-sass/scss/elegant-icons-sass.scss';
+
+.member-container {
+    display: flex;
+    background-color: #383838;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3em 0em;
+    
+    .member-inner-container {
+        display: flex;
+        width: 1200px;
+        justify-content: center;
+        margin-bottom: 2em;
+
+        @media screen and (max-width: variables.$breakpoint-tablet) {
+            flex-direction: column;
+        }
+
+        .member-item {
+            margin-right: 1em;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            border: 1px solid #dedede;
+
+            &:last-child {
+                margin-right: 0em;
+            }
+
+            .img {
+                height: 250px;
+                width: 250px;
+                background-color: #8a8a8a;
+            }
+
+            .name {
+                font-size: medium;
+                font-weight: fonts.$extra-bold;
+                color: #e4e4e4;
+                padding: 10px;
+                background-color: colors.$color-teal;
+            }
+
+            .position {
+                font-size: medium;
+                color: #606060;
+            }
+
+            .email {
+                font-size: medium;
+                color: #aaaaaa;
+            }
+
+            .phone {
+                font-size: medium;
+                color: #aaaaaa;
+            }
+        }
+    }
+
+    .button-view-all {
+        font-size: medium;
+        font-weight: fonts.$extra-bold;
+        color: #e4e4e4;
+        background-color: colors.$color-teal;   
+        border-radius: 4px;
+        text-align: center;
+        padding: 10px 30px;
+    }
+}

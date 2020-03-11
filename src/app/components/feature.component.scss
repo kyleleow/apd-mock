@@ -1,0 +1,108 @@
+@use './../../styles/colors' as colors;
+@use './../../styles/fonts' as fonts;
+@use './../../styles/variables' as variables;
+@import '../../../node_modules/elegant-icons-sass/scss/elegant-icons-sass.scss';
+
+.feature-container {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3em 0em;
+
+    .feature-inner-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1200px;
+        
+        @media screen and (max-width: variables.$breakpoint-tablet) {
+            flex-direction: column;
+            width: auto;
+        }
+
+        &:first-child {
+            margin-bottom: 2em;
+
+            @media screen and (max-width: variables.$breakpoint-tablet) {
+                margin-bottom: 0px;
+            }
+        }
+
+        .feature-item {
+            display: flex;
+            margin-right: 1em;
+
+            @media screen and (max-width: variables.$breakpoint-tablet) {
+                margin: 2em;
+            }
+
+            &:last-child {
+                margin-right: 0em;
+
+                @media screen and (max-width: variables.$breakpoint-tablet) {
+                    margin-right: 2em;
+                }
+            }
+
+            .badge {
+                position: relative;
+                margin-right: 20px;
+
+                .icon {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    color: #e4e4e4;
+                    text-align: center;        
+                    font-size: 22px;
+                }
+
+                .icon-desktop {
+                    @include elegant-icon('icon_desktop');
+                }
+
+                .icon-puzzle {
+                    @include elegant-icon('icon_puzzle_alt');
+                    left: 9px;
+                }
+
+                .icon-star {
+                    @include elegant-icon('icon_star');                    
+                }
+
+                .icon-doc {
+                    @include elegant-icon('icon_menu-square_alt');                                        
+                }
+
+                .icon-cart {
+                    @include elegant-icon('icon_cart');                                        
+                }
+
+                .icon-lifesaver {
+                    @include elegant-icon('icon_lifesaver');                                        
+                }
+            }
+
+            .feature {
+                .title {
+                    color: #606060;
+                    font-size: large;
+                    font-weight: fonts.$extra-bold;
+                }
+                
+                .subtitle {
+                    color: #aaaaaa;
+                    font-size: medium;
+                    padding-bottom: 20px
+                }
+
+                .description {
+                    color: #7a7a7a;
+                    font-size: large;
+                }
+            }
+
+        }
+    }
+}

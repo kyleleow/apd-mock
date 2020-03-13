@@ -1,0 +1,84 @@
+@use './../../styles/colors' as colors;
+@use './../../styles/fonts' as fonts;
+@use './../../styles/variables' as variables;
+@import '../../../node_modules/elegant-icons-sass/scss/elegant-icons-sass.scss';
+
+.interest-container {
+    display: flex;
+    justify-content: center;
+    margin: 3em 0em 2em 0em;
+
+    .interest-inner-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 1200px;
+        
+        @media screen and (max-width: variables.$breakpoint-tablet) {
+            margin: 1em;
+        }
+
+        .title {
+            font-family: fonts.$lato;
+            font-weight: 700;
+            font-style: italic;
+            color: colors.$color-teal;
+            font-size: larger;
+            margin-bottom: 30px;
+        }
+
+        .form-container {
+            border: 2px solid #dedede;
+            border-radius: 4px;
+
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+    
+                >input, textarea, select {
+                    width: 41%;
+                    padding: 17px;
+                    margin: 30px 30px 0px 30px;
+                    border: 1px solid #cecece;
+                    border-radius: 4px;
+
+                    @media screen and (max-width: variables.$breakpoint-tablet) {
+                        width: 100%;
+                    }
+                }
+
+                ::placeholder, select:invalid {
+                    font-family: "Arial";
+                    font-style: italic;
+                    color: grey;
+                }
+
+                textarea {
+                    height: 90px;
+                    font-family: "Arial";
+                }
+
+                select {
+                    width: 44%;
+
+                    @media screen and (max-width: variables.$breakpoint-tablet) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .submit-button {
+                margin: 30px;
+                font-size: small;
+                font-weight: fonts.$extra-bold;
+                width: 25%;
+                background-color: colors.$color-teal;
+                text-align: center;
+                padding: 15px 10px;
+                border-radius: 3px;
+                color: #e4e4e4;
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +8,7 @@ import { OfferComponent } from './components/offer.component';
 import { SkillComponent } from './components/skill.component';
 import { FeatureComponent } from './components/feature.component';
 import { MemberComponent } from './components/member.component';
+import { InterestComponent } from './components/interest.component';
 
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
@@ -16,11 +18,13 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     OfferComponent,
     SkillComponent,
     FeatureComponent,
-    MemberComponent
+    MemberComponent,
+    InterestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     NgCircleProgressModule.forRoot({
       // set defaults here
       "backgroundPadding": 7,

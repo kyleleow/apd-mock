@@ -180,6 +180,11 @@ body {
         @include elegant-icon('icon_search');
         font-size: small;
         color: colors.$color-teal;
+
+        @media screen and (max-width: variables.$breakpoint-tablet) {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
     }
 
     .navbar-mobile {
@@ -271,3 +276,110 @@ body {
       }
 }
 
+.page-breaker-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+
+    .diamond-container {
+        width: 40px;
+        height: 40px;
+        background-color: #00a99d;
+        transform: rotate(-45deg);
+        border-radius: 3px;
+    }
+
+    .diamond-container.black {
+        background-color: #383838;
+    }
+    
+    .icon-toolbox {
+        @include elegant-icon('icon_toolbox');
+        color: #e4e4e4;
+        text-align: center;        
+        font-size: 21px;
+        background-color: colors.$color-teal;        
+        position: absolute;
+    }
+
+    .icon-quote {
+        @include elegant-icon('icon_quotations');
+        color: #e4e4e4;
+        text-align: center;        
+        font-size: 21px;
+        background-color: #383838;        
+        position: absolute;
+        
+    }
+}
+
+.feedback-container {
+    display: flex;
+    background-color: colors.$color-teal;
+    justify-content: center;
+    padding: 3em 1em;
+
+    .feedback-inner-container {
+        display: flex;
+        width: 1200px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .feedback-owner {
+            background-color: #e4e4e4;
+            border-radius: 3px;
+            padding: 13px 20px;
+            font-size: small;
+            margin-bottom: 24px;
+
+            .name {
+                color: colors.$color-teal;                
+                font-weight: fonts.$extra-bold;
+            }
+
+            .position {
+                color: #aaaaaa;
+                font-style: italic;
+            }
+        }
+
+        .content {
+            color: #e4e4e4;
+            font-size: 0.8em;
+            text-align: center;
+            margin-bottom: 25px;        
+        }
+
+        .nav-button {
+            .icon {
+                padding: 2px 4px;
+                border-radius: 3px;
+                font-size: 25px;
+            }
+
+            .icon-triangle-left {
+                @include elegant-icon('arrow_triangle-left');
+                color: colors.$color-teal;
+                background-color: #e4e4e4;
+                margin-right: 5px;
+            }
+
+            .icon-triangle-right {
+                @include elegant-icon('arrow_triangle-right');
+                color: #e4e4e4;
+                background-color: #383838;
+            }
+        }
+    }
+}
+
+.footer-container {
+    text-align: center;
+    background-color: #333333;
+    color: #cccccc;
+    font-size: small;
+    padding: 3em 0 2em 0;
+}

@@ -1,0 +1,25 @@
+<div class="interest-container">
+    <div class="interest-inner-container">
+        <div class="title">Register Your Interest</div>
+        <div class="form-container">
+            <form #feedbackform="ngForm">
+                <input type="text" placeholder="Name" [(ngModel)]="name" name="name">
+                <select required [(ngModel)]="occupation" name="occupation">
+                    <option [value]="''" disabled selected hidden>Occupation</option>
+                    <option [value]="'designer'">Designer</option>
+                    <option [value]="'developer'">Developer</option>
+                </select>                
+                <input type="text" placeholder="Email Address" [(ngModel)]="email" name="email">
+                <input type="text" placeholder="Contact No" [(ngModel)]="contact" name="contact">
+                <textarea placeholder="Message ..." [(ngModel)]="message" name="message"></textarea>
+            </form>
+            <div class="submit-button" (click)="onSubmit()">SUBMIT MESSAGE</div>
+        </div>
+
+    </div>
+</div>
+
+<div class="page-breaker-icon">
+    <div class="diamond-container black"></div>
+    <div class="icon-quote"></div>
+</div>

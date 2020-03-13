@@ -14,11 +14,12 @@
     .member-inner-container {
         display: flex;
         width: 1200px;
-        justify-content: center;
+        justify-content: space-between;
         margin-bottom: 2em;
 
         @media screen and (max-width: variables.$breakpoint-tablet) {
             flex-direction: column;
+            width: auto;
         }
 
         .member-item {
@@ -27,49 +28,151 @@
             flex-direction: column;
             text-align: center;
             border: 1px solid #dedede;
+            align-items: center;
+            position: relative;
+            border-radius: 5px;
 
             &:last-child {
                 margin-right: 0em;
             }
 
+            @media screen and (max-width: variables.$breakpoint-tablet) {
+                margin: 1em 0em;
+            }
+
             .img {
-                height: 250px;
-                width: 250px;
+                height: 270px;
+                width: 270px;
                 background-color: #8a8a8a;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .diamond {
+                    width: 30px;
+                    height: 30px;
+                    background-color: #e4e4e4;
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    border-radius: 3px;
+
+                    &:nth-child(2) {
+                        background-color: #383838;
+                        z-index: 1;
+                    }
+                }
+
+                .social-icon-container {
+                    display: flex;
+                    position: relative;
+
+                    .icon {
+                        position: relative;
+                        top: -21px;
+                        font-size: small;
+                        color: colors.$color-teal;
+                    }
+                    
+                    .fb-icon {
+                        @include elegant-icon('social_facebook');
+                        left: -34px;
+                    }
+
+                    .twitter-icon {
+                        @include elegant-icon('social_twitter');
+                        color: #e3e3e3;
+                        z-index: 2;
+                        left: -17px;
+                    }
+
+                    .googleplus-icon {
+                        @include elegant-icon('social_googleplus');                        
+                    }
+
+                    .vimeo-icon {
+                        @include elegant-icon('social_vimeo');
+                        right: -17px;
+                    }
+
+                    .dribbble-icon {
+                        @include elegant-icon('social_dribbble');
+                        right: -34px;
+                    }
+                }
             }
 
             .name {
-                font-size: medium;
+                font-size: small;
                 font-weight: fonts.$extra-bold;
                 color: #e4e4e4;
                 padding: 10px;
                 background-color: colors.$color-teal;
+                position: relative;
+                top: -20px;
+                padding: 10px 20px;
+                border-radius: 3px;
             }
 
             .position {
-                font-size: medium;
+                font-size: small;
                 color: #606060;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #ebebeb;
             }
 
             .email {
-                font-size: medium;
+                font-size: small;
                 color: #aaaaaa;
+                padding: 15px 0 10px 0;
+
+                .icon-mail {
+                    @include elegant-icon('icon_mail');
+                    font-size: small;        
+                    margin-right: 10px;            
+                }
             }
 
             .phone {
-                font-size: medium;
+                font-size: small;
                 color: #aaaaaa;
+                padding: 10px 0px 15px 0px;
+
+                .icon-phone {
+                    @include elegant-icon('icon_phone');
+                    font-size: small;   
+                    margin-right: 10px;                 
+                }
+            }
+        }
+
+        .member-item.hover {
+            .img {
+                background-color: colors.$color-teal;
+            }
+
+            .name {
+                background-color: #383838;
+            }
+
+            .email span:last-child {
+                color: colors.$color-teal;
             }
         }
     }
 
     .button-view-all {
-        font-size: medium;
+        font-size: small;
         font-weight: fonts.$extra-bold;
         color: #e4e4e4;
         background-color: colors.$color-teal;   
         border-radius: 4px;
         text-align: center;
-        padding: 10px 30px;
+        padding: 10px 0px;
+        width: 1200px;
+
+        @media screen and (max-width: variables.$breakpoint-tablet) {
+            width: 80%;
+        }
     }
 }

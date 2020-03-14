@@ -310,8 +310,11 @@ body {
         text-align: center;        
         font-size: 21px;
         background-color: #383838;        
-        position: absolute;
-        
+        position: absolute;        
+    }
+    
+    .icon-quote.invert {
+        transform: rotate(180deg);
     }
 }
 
@@ -355,7 +358,7 @@ body {
 
         .nav-button {
             .icon {
-                padding: 2px 4px;
+                padding: 2px 4px 0px 4px;
                 border-radius: 3px;
                 font-size: 25px;
             }
@@ -371,6 +374,72 @@ body {
                 @include elegant-icon('arrow_triangle-right');
                 color: #e4e4e4;
                 background-color: #383838;
+            }
+        }
+    }
+}
+
+.client-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #383838;
+
+    .client-inner-container {
+        display: flex;
+        width: 1200px;        
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 2em 0em;
+        flex-wrap: wrap;
+
+        .icon {
+            padding: 2px 4px 0px 4px;
+            border-radius: 3px;
+            font-size: 25px;
+        }
+
+        .icon-triangle-left {
+            @include elegant-icon('arrow_triangle-left');
+            color: colors.$color-teal;
+            background-color: #e4e4e4;            
+        }
+
+        .icon-triangle-right {
+            @include elegant-icon('arrow_triangle-right');
+            color: #e4e4e4;
+            background-color: colors.$color-teal;
+        }
+
+        .client-item-container {
+            display: flex;
+
+            @media screen and (max-width: variables.$breakpoint-tablet) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .client-item {
+                width: 230px;
+                height: 130px;
+                background: #333333;
+                margin: 15px;
+                border-radius: 5px;
+
+                img {
+                    width: 135px;
+                    position: relative;
+                    top: 20px;
+                    left: 50px;
+                }
+            }
+
+            .client-item.highlight {
+                background: #232323;
+
+                img {
+                    top: 28px;
+                }
             }
         }
     }

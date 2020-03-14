@@ -13,7 +13,7 @@
     .feature-inner-container {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
         width: 1200px;
         
         @media screen and (max-width: variables.$breakpoint-tablet) {

@@ -121,28 +121,3 @@
     }
 }
 
-.page-breaker-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 20px;
-
-    .diamond-container {
-        width: 40px;
-        height: 40px;
-        background-color: #00a99d;
-        transform: rotate(-45deg);
-        border-radius: 3px;
-    }
-    
-    .icon-toolbox {
-        @include elegant-icon('icon_toolbox');
-        color: #e4e4e4;
-        text-align: center;        
-        font-size: 21px;
-        background-color: colors.$color-teal;        
-        position: absolute;
-    }
-}
-
